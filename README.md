@@ -40,10 +40,7 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Investimentos: Renda Fixa vs Renda Variável</h1>
-    <p>Neste site, você aprenderá os conceitos fundamentais dos investimentos em renda fixa e renda variável, visualizará as principais fórmulas financeiras e acompanhará gráficos em tempo real de diversas empresas.</p>
-  </header>
+  
 
   <section id="conceitos">
     <h2>Conceitos de Investimento</h2>
