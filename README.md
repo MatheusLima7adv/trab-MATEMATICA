@@ -94,7 +94,7 @@
       <label for="principal">Valor Aplicado (R$):</label>
       <input type="number" id="principal" name="principal" required><br><br>
 
-      <label for="juros">Taxa de Juros ao Mês (%):</label>
+      <label for="juros">Taxa de Juros  Mês (%):</label>
       <input type="number" id="juros" name="juros" required><br><br>
 
       <label for="periodos">Quantidade de Meses:</label>
@@ -109,7 +109,7 @@
 
   <section id="grafico">
     <h2>Gráficos em Tempo Real: Empresas para Investimento</h2>
-    <p>Acompanhe o desempenho de diversas empresas em tempo real através dos widgets da TradingView.</p>
+    <p>Acompanhe o desempenho de diversas empresas que movimentam a ecônomia em tempo real através da TradingView.</p>
     <div class="tradingview-widget-container">
       <div id="tradingview_apple"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
@@ -130,3 +130,66 @@
           "allow_symbol_change": true,
           "container_id": "tradingview_apple"
         });
+      </script>
+    </div>
+    <div class="tradingview-widget-container">
+      <div id="tradingview_amazon"></div>
+      <script type="text/javascript">
+        new TradingView.widget({
+          "width": "100%",
+          "height": 400,
+          "symbol": "NASDAQ:AMZN",
+          "interval": "D",
+          "timezone": "America/Sao_Paulo",
+          "theme": "dark",
+          "style": "1",
+          "locale": "pt",
+          "toolbar_bg": "#222",
+          "enable_publishing": false,
+          "hide_top_toolbar": false,
+          "withdateranges": true,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_amazon"
+        });
+      </script>
+    </div>
+    <div class="tradingview-widget-container">
+      <div id="tradingview_tesla"></div>
+      <script type="text/javascript">
+        new TradingView.widget({
+          "width": "100%",
+          "height": 400,
+          "symbol": "NASDAQ:TSLA",
+          "interval": "D",
+          "timezone": "America/Sao_Paulo",
+          "theme": "dark",
+          "style": "1",
+          "locale": "pt",
+          "toolbar_bg": "#222",
+          "enable_publishing": false,
+          "hide_top_toolbar": false,
+          "withdateranges": true,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_tesla"
+        });
+      </script>
+    </div>
+  </section>
+
+  <script>
+    function calcularInvestimento() {
+      var principal = parseFloat(document.getElementById("principal").value);
+      var juros = parseFloat(document.getElementById("juros").value) / 100;
+      var periodos = parseInt(document.getElementById("periodos").value);
+      
+      if (isNaN(principal) || isNaN(juros) || isNaN(periodos)) {
+        alert("Por favor, preencha todos os campos corretamente.");
+        return;
+      }
+      
+      var montante = principal * Math.pow(1 + juros, periodos);
+      document.getElementById("resultado").innerHTML = "Montante final: R$ " + montante.toFixed(2);
+    }
+  </script>
+</body>
+</html>
