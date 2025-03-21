@@ -89,24 +89,102 @@
 
     <h2>Simulação de Investimento</h2>
     <p>Preencha os dados abaixo para calcular o montante final do seu investimento em renda fixa com juros compostos:</p>
+    <div></div>
     
-    <form id="simulacaoForm">
-      <label for="principal">Valor Aplicado (R$):</label>
-      <input type="number" id="principal" name="principal" required><br><br>
-
-      <label for="juros">Taxa de Juros  Mês (%):</label>
-      <input type="number" id="juros" name="juros" required><br><br>
-
-      <label for="periodos">Quantidade de Meses:</label>
-      <input type="number" id="periodos" name="periodos" required><br><br>
-
-      <button type="button" onclick="calcularInvestimento()">Calcular</button>
-    </form>
-
-    <h3>Resultado:</h3>
-    <p id="resultado"></p>
-  </section>
-
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        color: #ffffff;
+      }
+      header {
+        background: #1db954;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        border-bottom: 4px solid #0e8c3f;
+      }
+      .container {
+        width: 90%;
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #1e1e1e;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(29, 185, 84, 0.7);
+      }
+      h2 {
+        color: #1db954;
+      }
+      .formula {
+        background: #2a2a2a;
+        padding: 10px;
+        border-radius: 4px;
+        font-family: "Courier New", Courier, monospace;
+        margin-bottom: 20px;
+        color: #ffffff;
+      }
+      form input, button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+      }
+      form input {
+        background: #2a2a2a;
+        color: white;
+      }
+      button {
+        background: #1db954;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .tradingview-widget-container {
+        margin: 20px 0;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #1db954;
+        color: white;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      Investimentos Inteligentes 2025
+    </header>
+  
+    <div class="container">
+      <h2>Renda Fixa vs Renda Variável</h2>
+      <p>Aprenda os conceitos fundamentais dos investimentos e acompanhe gráficos em tempo real.</p>
+    </div>
+  <div class="container">
+      <h2>Simulação de Investimento</h2>
+      <form id="simulacaoForm">
+        <label for="principal">Valor Aplicado (R$):</label>
+        <input type="number" id="principal" name="principal" required>
+  
+        <label for="juros">Taxa de Juros Mês (%):</label>
+        <input type="number" id="juros" name="juros" required>
+  
+        <label for="periodos">Quantidade de Meses:</label>
+        <input type="number" id="periodos" name="periodos" required>
+  
+        <button type="button" onclick="calcularInvestimento()">Calcular</button>
+      </form>
+      <h3>Resultado:</h3>
+      <p id="resultado"></p>
+    </div>
   <section id="grafico">
     <h2>Gráficos em Tempo Real: Empresas para Investimento</h2>
     <p>Acompanhe o desempenho de diversas empresas que movimentam a ecônomia em tempo real através da TradingView.</p>
